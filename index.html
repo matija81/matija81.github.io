@@ -674,18 +674,18 @@
       </div> -->
       <div class="col-lg-8 mb-4">
       <h2><span class="custom-underline-5">Pošaljite Nam Poruku</span></h2>
-      <form action="http://formspree.io/maxon150@yahoo.com" method="post">
+      <form action="http://formspree.io/maxon150@yahoo.com" method="POST">
         <div class="control-group form-group">
           <div class="controls">
             <label>Vaše Ime:</label>
-            <input type="text" class="form-control" id="name" required data-validation-required-message="Molimo unesite vaše ime.">
+            <input type="text" class="form-control" name="name" id="name" required data-validation-required-message="Molimo unesite vaše ime.">
             <p class="help-block"></p>
           </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Email Adresa:</label>
-              <input type="email" name="_replyto" class="form-control" required data-validation-required-message="Molimo unesite vašu email adresu.">
+              <input type="email" name="_replyto" name="email" class="form-control" required data-validation-required-message="Molimo unesite vašu email adresu.">
            </div>
            </div>
            <div class="control-group form-group">
@@ -699,7 +699,7 @@
            <!-- <button type="submit" class="btn btn-primary" id="sendMessageButton">Pošalji Poruku</button>
          </form>
        -->
-        <input type="submit" value="Pošalji Poruku" class="btn btn-primary" id="sendMessageButton">
+        <input type="submit" name="button" value="Pošalji Poruku" class="btn btn-primary" id="sendMessageButton">
       </form>
     </div>
 
