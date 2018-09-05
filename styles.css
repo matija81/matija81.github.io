@@ -147,7 +147,8 @@ footer h3 .custom-underline-4 {
 }
 
 #lokacije a,
-#contact button {
+#contact button,
+#contact .btn {
   background-color: #343a40;
   border-color: #343a40;
 }
@@ -182,10 +183,12 @@ a {
   border-color: #DC143C;
 
 }
-#contact button {
+#contact button,
+#contact .btn {
   margin: 25px 0;
 }
-#contact button:hover {
+#contact button:hover,
+#contact .btn:hover {
   background-color: orange;
   border-color: orange;
 
