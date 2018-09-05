@@ -639,7 +639,7 @@
       <span class="nav_top" id="kontakt"></span>
       <!-- Kontact Column -->
 
-      <div class="col-lg-8 mb-4">
+      <!-- <div class="col-lg-8 mb-4">
         <h2><span class="custom-underline-5">Pošaljite Nam Poruku</span></h2>
         <form name="sentMessage" id="contactForm" novalidate>
           <div class="control-group form-group">
@@ -667,12 +667,39 @@
               <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Molimo da unesete vašu poruku" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
-          <div id="success"></div>
+          <div id="success"></div> -->
           <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Pošalji Poruku</button>
+          <!-- <button type="submit" class="btn btn-primary" id="sendMessageButton">Pošalji Poruku</button>
         </form>
-      </div>
+      </div> -->
 
+      <form action="http://formspree.io/maxon150@yahoo.com">
+        <div class="control-group form-group">
+          <div class="controls">
+            <label>Vaše Ime:</label>
+            <input type="text" class="form-control" id="name" required data-validation-required-message="Molimo unesite vaše ime.">
+            <p class="help-block"></p>
+          </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>Email Adresa:</label>
+              <input type="email" name="_replyto" class="form-control" required data-validation-required-message="Molimo unesite vašu email adresu.">
+           </div>
+           </div>
+           <div class="control-group form-group">
+             <div class="controls">
+               <label>Poruka:</label>
+               <textarea  name="body" rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Molimo da unesete vašu poruku" maxlength="999" style="resize:none"></textarea>
+             </div>
+           </div>
+           <div id="success"></div> -->
+           <!-- For success/fail messages -->
+           <!-- <button type="submit" class="btn btn-primary" id="sendMessageButton">Pošalji Poruku</button>
+         </form>
+       -->
+        <input type="submit" value="Pošalji Poruku" class="btn btn-primary" id="sendMessageButton">
+      </form>
 
       <!-- Contact Details Column -->
       <div class="col-lg-4 mb-4 pgcity">
