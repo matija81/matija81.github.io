@@ -141,10 +141,10 @@ footer h3 .custom-underline-4 {
 .one {
   position: relative;
 }
-.one span.nav_top {
+/* .one span.nav_top {
   position: absolute;
   top: -120px;
-}
+} */
 
 #lokacije a,
 #contact button {
