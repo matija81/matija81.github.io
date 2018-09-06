@@ -7,7 +7,7 @@
 body {
   padding-top: 54px;
   background-color: #FFFAFA;
-  background-image: url("img/dimension.png");
+  background-image: url("img/diagmonds-light.png");
   background-repeat: repeat;
   background-attachment: scroll;
 }
@@ -34,6 +34,7 @@ h3{
 #info p, #lokacije p, #kontakt p {
   background-color: rgba(245, 245, 245, 0.7);
   border-radius: 4px;
+  padding: 4px;
 
 }
 hr.style12 {
