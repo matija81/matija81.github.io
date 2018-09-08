@@ -133,17 +133,17 @@ btnInstafeedLoad.addEventListener("click", function() {
 });
 
 
-
-
-
-$(window).scroll(function() {
-
-    if ($(this).scrollTop()>-150)
-     {
-        $('.a2a').fadeOut();
-     }
-    else
-     {
-      $('.a2a').fadeIn();
-     }
- });
+// 
+//
+//
+// $(window).scroll(function() {
+//
+//     if ($(this).scrollTop()>-150)
+//      {
+//         $('.a2a').fadeOut();
+//      }
+//     else
+//      {
+//       $('.a2a').fadeIn();
+//      }
+//  });

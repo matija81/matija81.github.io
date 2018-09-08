@@ -489,3 +489,8 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   80%  { transform: translateX(-1px); }
   100% { transform: translateX(0);    }
 }
+
+/* Hide AddToAny vertical share bar when screen is less than 980 pixels wide */
+@media screen and (max-width: 980px) {
+    .a2a_floating_style.a2a_vertical_style { display: none; }
+} 
