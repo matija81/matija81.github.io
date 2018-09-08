@@ -92,6 +92,22 @@ var galleryFeed = new Instafeed({
         margin:10,
         nav:true,
 
+        // responsive:{
+        //   0:{
+        //     items:1
+        //   },
+        //   200:{
+        //     items:2
+        //   },
+        //   565:{
+        //     items:3
+        //   },
+        //   768:{
+        //     items:4
+        //   },
+        //   992:{
+        //     items:5
+        //   }
         responsive:{
           0:{
             items:1
@@ -99,15 +115,13 @@ var galleryFeed = new Instafeed({
           200:{
             items:2
           },
-          565:{
+          400:{
             items:3
           },
           768:{
-            items:4
-          },
-          992:{
             items:5
           }
+
         }
       });
     });
