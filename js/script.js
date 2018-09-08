@@ -72,9 +72,9 @@ var galleryFeed = new Instafeed({
   target: "instafeed-gallery-feed",
   after: function() {
     // disable button if no more results to load
-    if (!this.hasNext()) {
-      btnInstafeedLoad.setAttribute('disabled', 'disabled');
-    }
+    // if (!this.hasNext()) {
+    //   btnInstafeedLoad.setAttribute('disabled', 'disabled');
+    // }
 
     var owl = $(".owl-carousel"),
         owlSlideSpeed = 300;
@@ -91,6 +91,7 @@ var galleryFeed = new Instafeed({
         loop:true,
         margin:10,
         nav:true,
+
         responsive:{
           0:{
             items:1
@@ -98,15 +99,19 @@ var galleryFeed = new Instafeed({
           200:{
             items:2
           },
-          400:{
+          565:{
             items:3
           },
           768:{
+            items:4
+          },
+          992:{
             items:5
           }
         }
       });
     });
+
 
     // keyboard controls
     $(document.documentElement).keydown(function(event) {
@@ -126,3 +131,19 @@ var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
+
+
+
+
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>-150)
+     {
+        $('.a2a').fadeOut();
+     }
+    else
+     {
+      $('.a2a').fadeIn();
+     }
+ });

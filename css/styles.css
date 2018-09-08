@@ -3,18 +3,35 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
+* {
 
+  /* font-family: 'Indie Flower', cursive; */
+  /* font-family: 'Merienda', cursive; */
+  font-family: 'Fira Sans Condensed', sans-serif;
+
+
+}
 body {
   padding-top: 54px;
-  background-color: rgba(255, 237, 249, 0.65);
+  background-color: rgba(240, 240, 240, 0.75);
   /* background-image: url("img/diagmonds-light.png"); */
   background-repeat: repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
   color: #343a40
+  /* font-family: 'Indie Flower', cursive; */
 }
 h1, h2, h3, h4, h5, h6, p {
   color: #343a40;
+  padding: 5px;
+  line-height: 1.6em;
+  letter-spacing: 0.1rem;
+
+  /* font-family: 'Indie Flower', cursive; */
+
 }
+
+
+
 header {
   box-shadow: 0px 4px 12px #666;
 }
@@ -25,7 +42,6 @@ h2 {
   margin-bottom: 30px;
 }
 h1 span, h2 span, h3 span {
-  background-color: rgba(250, 250, 250, 0.6);
   padding: 5px;
   border-radius: 5px;
 }
@@ -37,9 +53,8 @@ h3{
 }
 
 #info p, #lokacije p, #kontakt p {
-  background-color: rgba(245, 245, 245, 0.7);
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 5px;
+  padding: 5px;
 
 }
 hr.style12 {
@@ -63,7 +78,7 @@ hr {
 
 
 .custom-underline-1 {
-  box-shadow: inset 0 -2px 0px #32CD32, inset 0 -0px 0 orange;
+  box-shadow: inset 0 -2px 0px magenta, inset 0 -0px 0 orange;
 
 }
 .custom-underline-2 {
@@ -71,7 +86,7 @@ hr {
 
 }
 .custom-underline-3 {
-  box-shadow: inset 0 -2px 0 yellow, inset 0 -0px 0 blue;
+  box-shadow: inset 0 -2px 0 magenta, inset 0 -0px 0 blue;
 
 }
 .custom-underline-4 {
@@ -82,12 +97,7 @@ hr {
   box-shadow: inset 0 -2px 0 orange, inset 0 -0px 0 blue;
 
 }
-/* .container {
-  background-color: rgba(250, 250, 250, 0.7);
-} */
-/* h1 span {
-  margin-bottom: 260px;
-} */
+
 
 #info .corners {
 
@@ -95,14 +105,18 @@ hr {
   max-height: 345px;
 }
 img {
-  box-shadow: 9px  3px 10px #666;
+  box-shadow: 9px  5px 10px #666;
 }
 
 #produkti img {
   box-shadow: 0 0 0 #fff;
 }
-
-
+#produkti, #instafeed, #info, #lokacije, #contact {
+  padding: 10% 0;
+}
+#produkti, #info {
+  padding-top: 5%;
+}
 
 footer h3 .custom-underline-4 {
   box-shadow: inset 0 -2px 0 magenta, inset 0 -0px 0 blue;
@@ -122,14 +136,6 @@ footer h3 .custom-underline-4 {
   }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 575px) {
-/* Styles */
-   #info {
-    margin-top: 5%;
-    /* padding-top: 3%; */
-  }
-}
 .carousel-item {
   height: 65vh;
   min-height: 300px;
@@ -141,7 +147,7 @@ footer h3 .custom-underline-4 {
 }
 
 .portfolio-item {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .one {
@@ -204,7 +210,7 @@ a {
   text-decoration: none;
 }
 #produkti a:hover {
-
+  color: orange;
 }
 
 /* #produkti .card {
@@ -213,9 +219,7 @@ a {
 } */
 
 
-#contact {
 
-}
 #contact input, #contact textarea {
   box-shadow: 2px 2px 8px #666;
 
@@ -234,7 +238,9 @@ a {
   display: inline-flex;
 }
 
-
+#lokacije .row {
+  padding: 5% 0;
+}
 /* shadow effect images */
 
 
@@ -284,10 +290,10 @@ a {
 .footer-contact p { word-wrap: break-word; }
 .footer-contact i { padding-right: 10px; font-size: 18px; color: #343a40; }
 .footer-contact p a { border: 0; color: #fff}
-.footer-contact p a:hover, .footer-contact p a:focus { border: 0; }
+.footer-contact p a:hover, .footer-contact p a:focus { border: 0; text-decoration-color: magenta;}
 
 .footer-links a { color: #aaa; border: 0; }
-.footer-links a:hover, .footer-links a:focus { color: #fff; text-decoration: none;}
+.footer-links a:hover, .footer-links a:focus { color: #fff; text-decoration: underline; text-decoration-color: magenta;}
 
 .footer-bottom { padding: 15px 0 17px 0; background: #343a40; text-align: left; color: #aaa; }
 
@@ -321,6 +327,7 @@ a {
   padding-right: 0;
   padding-left: 0;
 }
+
 
 
 /* // the good stuff */
@@ -396,8 +403,23 @@ a {
   margin: 0 5px;
 }
 
-/* // load more button */
-#btn-instafeed-load {
+/* // load more button ------------------------------- */
+/* #btn-instafeed-load {
+  color: #fff;
+  background: #f09433;
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+
+  margin: 20px auto;
+  padding: 8px 12px;
+  display: block;
+  border: none;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.65);
+} */
+/* instafeed button link */
+#btn-instafeed {
+  opacity: 0.8;
   color: #fff;
   background: #f09433;
 background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -410,14 +432,60 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   border: none;
   box-shadow: 0px 3px 10px rgba(0,0,0,.65);
 }
+#btn-instafeed:hover {
+     opacity: 1;
+}
+ #instafeed a:hover {
+  text-decoration: none !important;
+}
 
-/* // media queries */
+.instafeed-container, .lokacije-container {
+  background-color: rgba(178, 178, 178, 0.3);
+  border-top: solid 1px rgba(111, 111, 111, 0.1);
+  border-bottom: solid 1px rgba(111, 111, 111, 0.1);
+
+}
+
+
+
+/* // media queries -------------------------- */
 @media screen and (min-width:768px) {
   .img-featured-container .description-container .caption {
     display: block;
   }
 }
 
-/* section#info div.pgcity {
-  background-color: #fff;
-} */
+#lokacije a:hover {
+  transform: scale(1.1);
+}
+
+ #instafeed button:hover {
+   transform: scale(1.1);
+ }
+
+
+ .cont { /* now a container for the image */
+    display: inline-block; /* shrink wrap to image */
+    overflow: hidden; /* hide the excess */
+  }
+  .cont img {
+    display: block; /* no whitespace */
+    transition: .3s ease-in-out;
+  }
+  .cont:hover img {
+    transform: scale(1.3);
+  }
+
+
+  .wiggle:hover {
+    animation: wiggle 1s ease;
+    animation-iteration-count: 1;
+  }
+
+@keyframes wiggle {
+  20%  { transform: translateX(3px);  }
+  40%  { transform: translateX(-3px); }
+  60%  { transform: translateX(2px);  }
+  80%  { transform: translateX(-1px); }
+  100% { transform: translateX(0);    }
+}
