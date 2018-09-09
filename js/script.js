@@ -91,6 +91,7 @@ var galleryFeed = new Instafeed({
         loop:true,
         margin:10,
         nav:true,
+        dots:false,
 
         responsive:{
           0:{
@@ -133,7 +134,7 @@ btnInstafeedLoad.addEventListener("click", function() {
 });
 
 
-// 
+//
 //
 //
 // $(window).scroll(function() {

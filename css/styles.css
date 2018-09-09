@@ -462,7 +462,17 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
  #instafeed button:hover {
    transform: scale(1.1);
  }
+#sidebar {
+  margin-top: 40px;
+}
+#sidebar .sidebar-ul {
+  margin-bottom: 40px;
 
+}
+#sidebar a:hover:not(.active) {
+  color: orange;
+  text-decoration: none;
+}
 
  .cont { /* now a container for the image */
     display: inline-block; /* shrink wrap to image */
@@ -477,10 +487,21 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   }
 
 
+
   .wiggle:hover {
     animation: wiggle 1s ease;
     animation-iteration-count: 1;
   }
+.custom-class-color {
+  background-color: #aaa;
+  border: 1px solid #666;
+  color: #343a40;
+}
+.active {
+  background-color: #666 !important;
+  border-radius: 0 !important;
+  border: 1px solid #666 !important;
+}
 
 @keyframes wiggle {
   20%  { transform: translateX(3px);  }
@@ -493,4 +514,4 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
 /* Hide AddToAny vertical share bar when screen is less than 980 pixels wide */
 @media screen and (max-width: 980px) {
     .a2a_floating_style.a2a_vertical_style { display: none; }
-} 
+}
