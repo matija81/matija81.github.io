@@ -494,8 +494,9 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   }
 .custom-class-color {
   background-color: #aaa;
-  border: 1px solid #666;
-  color: #343a40;
+  border-radius: 4px;
+  /* border: 1px solid #666;
+  color: #343a40; */
 }
 .active {
   background-color: #666 !important;
