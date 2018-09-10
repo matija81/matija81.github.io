@@ -25,7 +25,9 @@ $("nav ul li a[href^='#'], footer a[href^='#']").on('click', function(e) {
 
 
 
-
+$(function(){
+  new WOW().init();
+});
 
 
 //
