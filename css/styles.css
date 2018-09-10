@@ -29,8 +29,13 @@ h1, h2, h3, h4, h5, h6, p {
   /* font-family: 'Indie Flower', cursive; */
 
 }
-
-
+ /* navbar dropdown active colors */
+a.dropdown-item.active,
+a.dropdown-item:active {
+   color: #fff;
+   background-color: #DC143C;
+   border-color: #fff;
+}
 
 header {
   box-shadow: 0px 4px 12px #666;
@@ -111,7 +116,7 @@ img {
 #produkti img {
   box-shadow: 0 0 0 #fff;
 }
-#produkti, #instafeed, #info, #lokacije, #contact {
+#produkti, #instafeed, #info, #lokacije, #kontakt {
   padding: 10% 0;
 }
 #produkti, #info {
@@ -130,11 +135,7 @@ footer h3 .custom-underline-4 {
   margin-bottom: 30px;
 }
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
+
 
 .carousel-item {
   height: 65vh;
@@ -150,17 +151,11 @@ footer h3 .custom-underline-4 {
   margin-bottom: 60px;
 }
 
-.one {
-  position: relative;
-}
-.one span.nav_top {
-  position: absolute;
-  top: -120px;
-}
+
 
 #lokacije a,
-#contact button,
-#contact .btn {
+#kontakt button,
+#kontakt .btn {
   background-color: #343a40;
   border-color: #343a40;
 }
@@ -169,6 +164,9 @@ footer h3 .custom-underline-4 {
 
 a {
   color: #343a40;
+}
+#navbarDropdownBlog .dropdown-item:active {
+  background-color: #fff!important;
 }
 #lokacije span a {
   background-color: inherit;
@@ -179,13 +177,13 @@ a {
   color: #DC143C;
 }
 
-#contact a {
+#kontakt a {
   background-color: inherit;
   color: #343a40;
   text-decoration: none;
   font-weight: bolder;
 }
-#contact a:hover {
+#kontakt a:hover {
   color: orange;
 }
 
@@ -195,12 +193,12 @@ a {
   border-color: #DC143C;
 
 }
-#contact button,
-#contact .btn {
+#kontakt button,
+#kontakt .btn {
   margin: 25px 0;
 }
-#contact button:hover,
-#contact .btn:hover {
+#kontakt button:hover,
+#kontakt .btn:hover {
   background-color: orange;
   border-color: orange;
 
@@ -220,7 +218,7 @@ a {
 
 
 
-#contact input, #contact textarea {
+#kontakt input, #kontakt textarea {
   box-shadow: 2px 2px 8px #666;
 
 }
@@ -448,20 +446,20 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
 
 
 
-/* // media queries -------------------------- */
-@media screen and (min-width:768px) {
-  .img-featured-container .description-container .caption {
-    display: block;
-  }
-}
 
 #lokacije a:hover {
   transform: scale(1.1);
 }
 
+
+
  #instafeed button:hover {
    transform: scale(1.1);
  }
+
+
+
+
 #sidebar {
   margin-top: 40px;
 }
@@ -474,35 +472,46 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   text-decoration: none;
 }
 
- .cont { /* now a container for the image */
+#sidebar .list-group {
+  box-shadow: 3px 5px 8px #666;
+  position: sticky;
+}
+#sidebar .active {
+  background-color: #666 !important;
+  border-radius: 0 !important;
+  border: 1px solid #666 !important;
+}
+
+nav li a .active {
+color: #fff !important;
+
+}
+
+.cont { /* now a container for the image */
     display: inline-block; /* shrink wrap to image */
     overflow: hidden; /* hide the excess */
-  }
-  .cont img {
+}
+.cont img {
     display: block; /* no whitespace */
     transition: .3s ease-in-out;
-  }
-  .cont:hover img {
+}
+.cont:hover img {
     transform: scale(1.3);
-  }
+}
 
 
-
-  .wiggle:hover {
+.wiggle:hover {
     animation: wiggle 1s ease;
     animation-iteration-count: 1;
-  }
+}
 .custom-class-color {
   background-color: #aaa;
   border-radius: 4px;
   /* border: 1px solid #666;
   color: #343a40; */
 }
-.active {
-  background-color: #666 !important;
-  border-radius: 0 !important;
-  border: 1px solid #666 !important;
-}
+
+
 
 @keyframes wiggle {
   20%  { transform: translateX(3px);  }
@@ -512,6 +521,18 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   100% { transform: translateX(0);    }
 }
 
+/* // media queries -------------------------- */
+@media screen and (min-width:768px) {
+  .img-featured-container .description-container .caption {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
 /* Hide AddToAny vertical share bar when screen is less than 980 pixels wide */
 @media screen and (max-width: 980px) {
     .a2a_floating_style.a2a_vertical_style { display: none; }

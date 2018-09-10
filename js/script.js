@@ -1,41 +1,60 @@
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a:not(#lokacije a)").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
 
 
-        $("#help_button").click(function() {
-            $("#help").slideToggle(1000, function() {
-                if($("#help_button").val() == "close")
-                {
-                    $("#help_button").val("show table");
-                }
-                else
-                {
-                    $("#help_button").val("close");
-                }
-            });
-        });
+
+// scrolling smooth ----------
+$("nav ul li a[href^='#'], footer a[href^='#']").on('click', function(e) {
+
+   // prevent default anchor click behavior
+   e.preventDefault();
+
+   // store hash
+   var hash = this.hash;
+
+
+   // animate
+   $('html, body').animate({
+       scrollTop: $(hash).offset().top
+     }, 300, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
 });
+
+
+
+
+
+
+//
+// $('nav ul li a[href*=#]:not([href=#]), footer a[href*=#]:not([href=#])').click(function() {
+//
+//
+// // $('#lokacije a[href*=#]:not([href=#])').click(function() {
+//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+//         || location.hostname == this.hostname) {
+//
+//         var target = $(this.hash);
+// 		console.log("target= " + target);
+//         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+// 		console.log(target);
+//            if (target.length) {
+//              $('html,body').animate({
+//                  scrollTop: (target.offset().top - 130) /*offset due to floating header*/
+//             }, 1000);
+//             return false;
+//         }
+//     }
+// });
+
+
+
+
+
+
+
 
 // instafeed js ---------------------------------------------------------------
 // How to get an access token:
@@ -132,21 +151,3 @@ var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
 btnInstafeedLoad.addEventListener("click", function() {
   galleryFeed.next()
 });
-
-
-
-
-//
-//
-//
-// $(window).scroll(function() {
-//
-//     if ($(this).scrollTop()>-150)
-//      {
-//         $('.a2a').fadeOut();
-//      }
-//     else
-//      {
-//       $('.a2a').fadeIn();
-//      }
-//  });
